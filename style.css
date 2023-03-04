@@ -1,0 +1,195 @@
+* {
+  font-family: "inter", "Courier New", Courier, monospace;
+}
+
+header img {
+  height: 50px;
+  width: 100px;
+}
+
+.ok {
+  animation-name: MoveUpDown;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes MoveUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.ani img:hover {
+  scale: 1.1;
+}
+
+.dis p:hover {
+  scale: 1.05;
+  color: rgb(34, 130, 255);
+}
+
+.back-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.abouts:hover {
+  --webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
+
+.change_content:after {
+  content: "";
+  animation: changetext 5s infinite linear;
+}
+
+.change {
+  animation-name: MoveUpDown;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes MoveUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.top {
+  margin-top: -50px;
+}
+
+.videoContent h1 {
+  align-items: center;
+  font-family: "inter";
+  color: #fff;
+  display: flex;
+  font-size: 4rem;
+  font-weight: 800;
+  height: 100%;
+  justify-content: center;
+  left: 10%;
+  margin: auto;
+  opacity: 1;
+  padding: 1rem;
+  position: absolute;
+  text-align: center;
+  width: 80%;
+  z-index: 1;
+}
+
+video {
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  width: 100%;
+}
+
+@media only screen and (max-width: 425px) {
+  .videoContent h1 {
+    color: #fff;
+    font-size: 15px;
+    height: 20%;
+    left: 12%;
+    margin: 5rem auto auto;
+    opacity: 1;
+    padding: 1rem;
+    position: absolute;
+    text-align: center;
+    width: 80%;
+    z-index: 1;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .videoContent h1 {
+    font-size: 3rem;
+  }
+}
+
+/* loading animation  */
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #cef;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(24px, 0);
+  }
+}
